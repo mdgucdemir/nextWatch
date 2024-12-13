@@ -50,7 +50,7 @@ const Header = () => {
     >
       <div className="container">
         <Link className={`navbar-brand ${styles.logo}`} href="/">
-          nextWatch
+          nextWatchh
         </Link>
         <button
           className="navbar-toggler"
