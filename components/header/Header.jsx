@@ -13,6 +13,8 @@ const Header = () => {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -41,8 +43,6 @@ const Header = () => {
       setIsOpen(false);
     }
   };
-
-  const isActive = (path) => router.pathname === path;
 
   return (
     <nav
