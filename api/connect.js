@@ -1,5 +1,5 @@
 const baseUrl = "https://api.themoviedb.org/3/";
-const accessToken = process.env.NEXT_PUBLIC_TMDBI_TOKEN;
+const API_KEY = process.env.NEXT_PUBLIC_TMDBI_TOKEN;
 
 // fetch api
 export const fetchEndPoint = async (mediaType) => {
@@ -8,7 +8,7 @@ export const fetchEndPoint = async (mediaType) => {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: `Bearer ${accessToken}`,
+        Authorization: `Bearer ${API_KEY}`,
       },
     });
 
@@ -17,28 +17,12 @@ export const fetchEndPoint = async (mediaType) => {
     }
 
     const data = await response.json();
+    console.log(API_KEY);
     return data;
   } catch (error) {
     console.error("API Fetch Error:", error);
     return [];
   }
-
-  // await fetch(baseUrl + mediaType + "?" + `page=${page_Nummber}`, {
-  //   method: "GET",
-  //   headers: {
-  //     accept: "application/json",
-  //     Authorization: `Bearer ${accessToken}`,
-  //   },
-  // })
-  //   .then((res) => res.json())
-  //   .then((data) => {
-  //     // console.log(data);
-  //     return data;
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //     return [];
-  //   });
 };
 
 //Images
