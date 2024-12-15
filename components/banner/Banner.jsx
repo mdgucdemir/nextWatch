@@ -49,9 +49,10 @@ const Banner = ({ mediaType, type }) => {
                   src={apiImage.originalImage(
                     item.backdrop_path ? item.backdrop_path : item.poster_path
                   )}
-                  alt={item.original_name}
+                  alt={item.original_name || "Film ismi mevcut degil"}
                   fill
                   className={styles.image}
+                  priority
                 />
               </div>
             ))}
