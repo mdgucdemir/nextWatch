@@ -7,6 +7,8 @@ import { FaSearch } from "react-icons/fa";
 import { VscChromeClose } from "react-icons/vsc";
 import { useRouter } from "next/navigation";
 
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
