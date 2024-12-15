@@ -1,0 +1,104 @@
+.navColor {
+  background-color: rgba(1, 1, 1, 0.7);
+}
+
+.logo {
+  font-size: 32px;
+}
+.logo:hover {
+  color: var(--linkHover);
+  transition: 1s ease;
+}
+
+.link {
+  font-size: 18px;
+}
+
+.link:hover {
+  color: var(--linkHover);
+  transition: 1s ease;
+}
+.aktif {
+  color: var(--linkHover);
+}
+
+.icons {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.icon:first-child {
+  margin-left: 0px;
+}
+
+.icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+.icon:hover {
+  color: var(--linkHover);
+  transition: 1s ease;
+}
+
+.searchContainer {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  background-color: rgba(1, 1, 1, 0.7);
+  top: 70px;
+  left: 0;
+  animation: search 1s ease;
+}
+
+.searchWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchInput {
+  width: 100%;
+  height: 100%;
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 0 2rem;
+  font-size: 18px;
+  border: none;
+}
+
+.closeIcon {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 0 20px;
+  }
+  .searchContainer {
+    height: 40px;
+  }
+  .closeIcon {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .searchContainer {
+    top: 280px;
+    z-index: 2;
+  }
+}
+
+@keyframes search {
+  0% {
+    transform: translateY(-130%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
