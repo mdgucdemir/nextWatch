@@ -1,5 +1,5 @@
 const baseUrl = "https://api.themoviedb.org/3/";
-const API_KEY = process.env.TMDBI_TOKEN;
+const API_KEY = process.env.NEXT_PUBLIC_TMDBI_TOKEN;
 
 // fetch api
 export const fetchEndPoint = async (mediaType) => {
