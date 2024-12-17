@@ -1,8 +1,5 @@
 const baseUrl = "https://api.themoviedb.org/3/";
-const API_KEY = process.env.NEXT_PUBLIC_TMDBI_TOKEN;
-
-// const API_KEY =
-//   "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1Y2MwZjA5MGI1NTc2MWIxMmU2ZGViZmNiYTE5NGUzYyIsIm5iZiI6MTcyNTU0NTM1Ni45MTczLCJzdWIiOiI2NTNiZWI0OWJjMmNiMzAxMmMzMGE2M2MiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.frWC5SzehOnXoIU69-gaAnQqKUBode_-pLE8pW9e0Bo";
+const API_KEY = process.env.TMDBI_TOKEN;
 
 // fetch api
 export const fetchEndPoint = async (mediaType) => {
